@@ -14,7 +14,7 @@ const projects = await getCollection('projects', ({ data }) => {
 >
 	<h2 class="font-monospace text-2xl text-orange lg:text-4xl">Projects</h2>
 	<span class="mb-10 h-1 w-10 bg-orange"></span>
-	<div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
+	<!-- <div class="mb-10 flex w-full flex-col flex-wrap items-center md:flex-row">
 		{
 			projects.map((project) => (
 				<Card
@@ -26,9 +26,14 @@ const projects = await getCollection('projects', ({ data }) => {
 				/>
 			))
 		}
-	</div>
-	<a
-		href="https://github.com/"
+	</div> -->
+	<article class="flex flex-col items-center justify-center md:flex-row">
+		<section class="flex flex-col items-center justify-center md:w-1/2">
+			This section is currently under maintenance and will be live again later today.
+		</section>
+	</article>
+	<a 
+		href="javascript:alert('This feature is currently under maintenance. Please check back in a few hours.');"
 		target="_blank"
 		rel="noopener"
 		class="flex flex-row text-black hover:text-orange dark:text-white dark:hover:text-orange"
