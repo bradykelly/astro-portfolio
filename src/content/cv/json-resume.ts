@@ -1,5 +1,5 @@
 // TODO Pull all descriptions from schema
-import type { Iso8601 } from 'utils'
+import type { Iso8601Date } from 'utils'
 
 export interface JsonResume {
 	/**
@@ -67,9 +67,25 @@ export interface JsonResume {
 
 	references?: Reference[]
 
-	proj
+	projects?: Project[]
 
 	[k: string]: unknown
+}
+
+export interface Location {
+
+    address: string
+
+    postalCode: string
+
+    city: string
+
+    // TODO Validation voodoo: ISO-3166-1 ALPHA-2, e.g. US, AU, IN
+    countryCode: string
+
+    region: string
+	
+    [k: string]: unknown
 }
 
 export interface Work {
@@ -98,9 +114,9 @@ export interface Work {
 	 */
 	url?: string
 
-	startDate?: Iso8601
+	startDate?: Iso8601Date
 
-	endDate?: Iso8601
+	endDate?: Iso8601Date
 
 	/**
 	 * Give an overview of your responsibilities at the company
@@ -139,9 +155,9 @@ export interface Education {
 	 */
 	studyType?: string
 
-	startDate?: Iso8601
+	startDate?: Iso8601Date
 
-	endDate?: Iso8601
+	endDate?: Iso8601Date
 
 	/**
 	 * grade point average, e.g. 3.67/4.0
@@ -176,9 +192,9 @@ export interface Volunteer {
 	 */
 	url?: string
 
-	startDate?: Iso8601
+	startDate?: Iso8601Date
 
-	endDate?: Iso8601
+	endDate?: Iso8601Date
 
 	/**
 	 * Give an overview of your responsibilities at the company
@@ -219,7 +235,7 @@ export interface Award {
 	 */
 	title?: string
 
-	date?: Iso8601
+	date?: Iso8601Date
 
 	/**
 	 * e.g. Time Magazine
@@ -269,7 +285,7 @@ export interface Publication {
 	 */
 	publisher?: string
 
-	releaseDate?: Iso8601
+	releaseDate?: Iso8601Date
 
 	/**
 	 * e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html
@@ -363,9 +379,9 @@ export interface Project {
 	 */
 	keywords?: string[]
 
-	startDate?: Iso8601
+	startDate?: Iso8601Date
 
-	endDate?: Iso8601
+	endDate?: Iso8601Date
 
 	/**
 	 * e.g. http://www.computer.org/csdl/mags/co/1996/10/rx069-abs.html
