@@ -59,6 +59,16 @@ export interface JsonResume {
 
 	publications?: Publication[]
 
+	skills?: Skill[]
+
+	languages?: Language[]
+
+	interests?: Interest[]
+
+	references?: Reference[]
+
+	proj
+
 	[k: string]: unknown
 }
 
