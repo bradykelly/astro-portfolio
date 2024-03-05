@@ -1,7 +1,7 @@
 // TODO Pull all descriptions from schema
-import type { Iso8601Date } from 'utils'
+import { Iso8601Date } from 'utils'
 
-export interface JsonResume {
+export type JsonResume = {
 	/**
 	 * link to the version of the schema that can validate the resume
 	 */
@@ -72,7 +72,7 @@ export interface JsonResume {
 	[k: string]: unknown
 }
 
-export interface Location {
+export type Location = {
 
     address: string
 
@@ -88,7 +88,7 @@ export interface Location {
     [k: string]: unknown
 }
 
-export interface Work {
+export type Work = {
 	/**
 	 * e.g. Facebook
 	 */
@@ -134,7 +134,7 @@ export interface Work {
 	[k: string]: unknown
 }
 
-export interface Education {
+export type Education = {
 	/**
 	 * e.g. Massachusetts Institute of Technology
 	 */
@@ -176,7 +176,7 @@ export interface Education {
 }
 []
 
-export interface Volunteer {
+export type Volunteer = {
 	/**
 	 * e.g. Facebook
 	 */
@@ -209,7 +209,7 @@ export interface Volunteer {
 	[k: string]: unknown
 }
 
-export interface Profile {
+export type Profile = {
 	/**
 	 * e.g. Facebook or Twitter
 	 */
@@ -229,7 +229,7 @@ export interface Profile {
 	[k: string]: unknown
 }
 
-export interface Award {
+export type Award = {
 	/**
 	 * e.g. One of the 100 greatest minds of the century
 	 */
@@ -250,76 +250,8 @@ export interface Award {
 	[k: string]: unknown
 }
 
-export interface Certificate {
-	/**
-	 * e.g. Certified Kubernetes Administrator
-	 */
-	name?: string
 
-	/**
-	 * e.g. 1989-06-12
-	 */
-	date?: string
-
-	/**
-	 * e.g. http://example.com
-	 */
-	url?: string
-
-	/**
-	 * e.g. CNCF
-	 */
-	issuer?: string
-
-	[k: string]: unknown
-}
-
-export interface Publication {
-	/**
-	 * e.g. The World Wide Web
-	 */
-	name?: string
-
-	/**
-	 * e.g. IEEE, Computer Magazine
-	 */
-	publisher?: string
-
-	releaseDate?: Iso8601Date
-
-	/**
-	 * e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html
-	 */
-	url?: string
-
-	/**
-	 * Short summary of publication. e.g. Discussion of the World Wide Web, HTTP, HTML.
-	 */
-	summary?: string
-
-	[k: string]: unknown
-}
-
-export interface Skill {
-	/**
-	 * e.g. Web Development
-	 */
-	name?: string
-
-	/**
-	 * e.g. Master
-	 */
-	level?: string
-
-	/**
-	 * List some keywords pertaining to this skill
-	 */
-	keywords?: string[]
-
-	[k: string]: unknown
-}
-
-export interface Language {
+export type Language = {
 	/**
 	 * e.g. English, Spanish
 	 */
@@ -333,7 +265,7 @@ export interface Language {
 	[k: string]: unknown
 }
 
-export interface Interest {
+export type Interest = {
 	/**
 	 * e.g. Philosophy
 	 */
@@ -344,7 +276,7 @@ export interface Interest {
 	[k: string]: unknown
 }
 
-export interface Reference {
+export type Reference = {
 	/**
 	 * e.g. Timothy Cook
 	 */
@@ -358,7 +290,7 @@ export interface Reference {
 	[k: string]: unknown
 }
 
-export interface Project {
+export type Project = {
 	/**
 	 * e.g. The World Wide Web
 	 */
@@ -409,7 +341,7 @@ export interface Project {
 /**
  * The schema version and any other tooling configuration lives here
  */
-export interface Meta {
+export type Meta = {
 	/**
 	 * URL (as per RFC 3986) to latest version of this document
 	 */
