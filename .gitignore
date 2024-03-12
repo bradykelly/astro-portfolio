@@ -22,11 +22,5 @@ pnpm-debug.log*
 /test-results/
 /playwright-report/
 /playwright/.cache/
-/.idea/.idea.astro-portfolio.dir/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-/.idea/.idea.astro-portfolio.dir/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-/.idea/.idea.astro-portfolio.dir/.idea/cody_history.xml
-/.idea/.idea.astro-portfolio.dir/.idea/encodings.xml
-/.idea/.idea.astro-portfolio.dir/.idea/sonarlint/issuestore/index.pb
-/.idea/.idea.astro-portfolio.dir/.idea/sonarlint/securityhotspotstore/index.pb
-/.idea/.idea.astro-portfolio.dir/.idea/indexLayout.xml
-/.idea/.idea.astro-portfolio.dir/.idea/vcs.xml
+/.idea/.idea.astro-portfolio.dir/.idea/sonarlint/issuestore/
+/.idea/.idea.astro-portfolio.dir/.idea/sonarlint/securityhotspotstore/
