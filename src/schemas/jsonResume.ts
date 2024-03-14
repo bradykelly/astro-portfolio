@@ -8,7 +8,7 @@ import {projectSchema} from "./projectSchema";
 
 
 // TODO Pull all descriptions from json schema
-export const JsonResumeSchema = z.object({
+export const jsonResume = z.object({
 
     name: z.string(),
     label: z.string(),

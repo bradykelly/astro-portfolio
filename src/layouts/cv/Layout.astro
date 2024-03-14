@@ -1,0 +1,22 @@
+﻿---
+import Footer from '@components/Footer.astro';
+import Navbar from '@components/Navbar.astro';
+import {SEO} from 'astro-seo';
+import { getCollection } from 'astro:content';
+import Layout from "../Layout.astro";
+
+const cv = await getCollection('cvmain')[0].data;
+---
+
+
+<Layout>
+    <main id="resume" class="page">
+        <header class="resume-header clearfix">
+            <div class="profile-header pull-left">
+                <h1>{c}or Software Engineer - Specialist in C# and ASP.NET.</h2>
+            </div>
+            <div class="profile-pic pull-right">
+            </div>
+        </header>
+    </main>
+</Layout>

@@ -1,8 +1,9 @@
 {
-	"name": "",
+	"name": "portfolio-bradykelly",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
+		"sync": "pnpm dlx astro sync",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro check && astro build",

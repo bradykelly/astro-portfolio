@@ -1,10 +1,10 @@
 import { defineCollection, z } from 'astro:content'
-import { JsonResumeSchema } from 'schemas/JsonResumeSchema';
+import { jsonResume } from '../schemas/jsonResume';
 
-const jsonResumeCollection = defineCollection({
-	schema: JsonResumeSchema
+const jsonResumeCv = defineCollection({
+	schema: jsonResume
 });
 
 export const collections = {
-	jsonResume: jsonResumeCollection,
+	cvmain: jsonResumeCv,
 };
