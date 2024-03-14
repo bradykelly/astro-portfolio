@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../Layout.astro";
+const { title, icon } = Astro.props;
+---
+
+<Layout>
+  <!--TODO: Find out about x-data, @click, check custom attributes, etc.-->
+  <li class="relative border-b border-text/30" x-data="{selected:null}">
+    <button type="button" class="w-full px-3 py-3 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+      <span class="flex items-center justify-between">
+        <span class="text-2xl font-mono text-text/80 hover:text-text/95 flex justify-center items-start">
+          <Icon name={icon} class="w-8 h-8 mr-4" />
+          {title}
+        </span>
+        <Icon name="ic:baseline-arrow-drop-down" class="w-5 h-5" x-bind:style="selected ==1 ? 'rotate:'+' 180deg' : ''"/>
+      </span>
+    </button>
+
+    <div
+        class="relative overflow-hidden transition-all max-h-0 duration-700"
+        style=""
+        x-ref="container1"
+        x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+    >
+      <div class="py-4 px-2 text-text/60">
+        <slot />
+      </div>
+    </div>
+  </li>
+
+</Layout>

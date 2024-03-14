@@ -1,0 +1,17 @@
+﻿---
+const {name, position, startDate, endDate, location, summary, url, description, highlights} = Astro.props
+---
+
+<article>
+    <h3>{name}: {position}</h3>
+    <h4>{startDate} - {endDate}, {location}</h4>
+    <p>{summary}</p>
+    <div>
+        <ul>
+            {
+                highlights.map(highlight =>
+                        <li>{highlight}</li>)
+            }
+        </ul>
+    </div>
+</article>

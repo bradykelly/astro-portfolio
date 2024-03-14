@@ -1,0 +1,22 @@
+﻿---
+import WorkItem from "./WorkItem.astro";
+const { work } = Astro.props
+---
+
+<section id="cv-work">
+    <h2>Work Experience</h2>
+    <ul>
+        {
+            work.map(work => {
+                const {startDate, endDate, name, summary, url, highlights} = work
+                return <WorkItem 
+                        startDate={startDate} 
+                        endDate={endDate} 
+                        name={name} 
+                        summary={summary} 
+                        url={url} 
+                        highlights={highlights} />
+            })
+        }
+    </ul>
+</section>
